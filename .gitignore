@@ -4,3 +4,7 @@
 /build
 /libosmium-deps
 /.vs*
+test
+examples
+doc
+CMakeFiles

@@ -283,8 +283,9 @@ namespace osmium {
         // static constexpr int32_t undefined_coordinate = std::numeric_limits<int32_t>::max();
         static constexpr int32_t undefined_coordinate = 2147483647;
 
+        //exchange std::round for ::round for building with android
         static int32_t double_to_fix(const double c) noexcept {
-            return static_cast<int32_t>(std::round(c * detail::coordinate_precision));
+            return static_cast<int32_t>(::round(c * detail::coordinate_precision));
         }
 
         static constexpr double fix_to_double(const int32_t c) noexcept {
